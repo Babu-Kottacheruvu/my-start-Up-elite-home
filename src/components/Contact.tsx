@@ -109,12 +109,12 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg">WhatsApp</h4>
                   <a 
-                    href="https://wa.me/5551234567" 
+                    href="https://wa.me/919014487604" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-green-400 hover:text-green-300 transition-colors"
                   >
-                    +1 (555) 123-4567
+                    +91 9014487604
                   </a>
                   <p className="text-slate-300 text-sm">Click to chat instantly</p>
                 </div>
@@ -226,7 +226,7 @@ const Contact = () => {
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
                 <a 
-                  href="https://wa.me/5551234567" 
+                  href="https://wa.me/919014487604" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center gap-2"

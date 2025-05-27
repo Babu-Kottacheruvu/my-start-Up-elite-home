@@ -34,7 +34,7 @@ const Header = () => {
               <span className="text-sm">info@elitehomes.com</span>
             </div>
             <a 
-              href="https://wa.me/5551234567" 
+              href="https://wa.me/919014487604" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors"
@@ -97,7 +97,7 @@ const Header = () => {
                   <span className="text-sm">info@elitehomes.com</span>
                 </div>
                 <a 
-                  href="https://wa.me/5551234567" 
+                  href="https://wa.me/919014487604" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors mt-2"
