@@ -1,8 +1,70 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`Real Estate Inquiry: ${formData.subject}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.firstName} ${formData.lastName}\n` +
+        `Email: ${formData.email}\n` +
+        `Subject: ${formData.subject}\n\n` +
+        `Message:\n${formData.message}`
+      );
+      
+      const mailtoLink = `mailto:kbabu0307babu@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+      
+      toast({
+        title: "Email Client Opened",
+        description: "Your default email client should open with the message ready to send.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an error processing your request.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,13 +146,17 @@ const Contact = () => {
 
           <div className="bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/10">
             <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium mb-2">First Name</label>
                   <input 
                     type="text" 
-                    className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full p-3 rounded-lg bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
                     placeholder="John"
                   />
                 </div>
@@ -98,7 +164,11 @@ const Contact = () => {
                   <label className="block text-sm font-medium mb-2">Last Name</label>
                   <input 
                     type="text" 
-                    className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full p-3 rounded-lg bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
                     placeholder="Doe"
                   />
                 </div>
@@ -108,14 +178,24 @@ const Contact = () => {
                 <label className="block text-sm font-medium mb-2">Email</label>
                 <input 
                   type="email" 
-                  className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full p-3 rounded-lg bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   placeholder="john@example.com"
                 />
               </div>
               
               <div>
                 <label className="block text-sm font-medium mb-2">Subject</label>
-                <select className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <select 
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full p-3 rounded-lg bg-white border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
+                >
                   <option value="">Select a subject</option>
                   <option value="buying">Buying a Property</option>
                   <option value="selling">Selling a Property</option>
@@ -128,14 +208,22 @@ const Contact = () => {
                 <label className="block text-sm font-medium mb-2">Message</label>
                 <textarea 
                   rows={4}
-                  className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full p-3 rounded-lg bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   placeholder="Tell us about your real estate needs..."
                 ></textarea>
               </div>
               
               <div className="flex gap-4">
-                <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                  Send Message
+                <button 
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors disabled:opacity-50"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
                 <a 
                   href="https://wa.me/5551234567" 
