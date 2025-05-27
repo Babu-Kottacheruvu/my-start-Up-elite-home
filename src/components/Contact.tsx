@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -37,6 +37,24 @@ const Contact = () => {
                   <h4 className="font-semibold text-lg">Email</h4>
                   <p className="text-slate-300">info@elitehomes.com</p>
                   <p className="text-slate-300">sales@elitehomes.com</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="bg-green-600 p-3 rounded-lg">
+                  <MessageCircle size={24} />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg">WhatsApp</h4>
+                  <a 
+                    href="https://wa.me/5551234567" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-green-400 hover:text-green-300 transition-colors"
+                  >
+                    +1 (555) 123-4567
+                  </a>
+                  <p className="text-slate-300 text-sm">Click to chat instantly</p>
                 </div>
               </div>
               
@@ -115,9 +133,20 @@ const Contact = () => {
                 ></textarea>
               </div>
               
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                Send Message
-              </button>
+              <div className="flex gap-4">
+                <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                  Send Message
+                </button>
+                <a 
+                  href="https://wa.me/5551234567" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center gap-2"
+                >
+                  <MessageCircle size={20} />
+                  WhatsApp
+                </a>
+              </div>
             </form>
           </div>
         </div>
