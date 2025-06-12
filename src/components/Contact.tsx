@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
@@ -9,6 +8,7 @@ const Contact = () => {
     firstName: '',
     lastName: '',
     email: '',
+    phoneNumber: '',
     subject: '',
     message: ''
   });
@@ -32,6 +32,7 @@ const Contact = () => {
       const body = encodeURIComponent(
         `Name: ${formData.firstName} ${formData.lastName}\n` +
         `Email: ${formData.email}\n` +
+        `Phone: ${formData.phoneNumber}\n` +
         `Subject: ${formData.subject}\n\n` +
         `Message:\n${formData.message}`
       );
@@ -51,6 +52,7 @@ const Contact = () => {
         firstName: '',
         lastName: '',
         email: '',
+        phoneNumber: '',
         subject: '',
         message: ''
       });
@@ -187,6 +189,20 @@ const Contact = () => {
               </div>
               
               <div>
+                <label className="block text-sm font-medium mb-2">Phone</label>
+                <input 
+                  type="tel" 
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleInputChange}
+                  required
+                  pattern="[0-9+\s\-()]*"
+                  className="w-full p-3 rounded-lg bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  placeholder="+91 90144-87604"
+                />
+              </div>
+              
+              <div>
                 <label className="block text-sm font-medium mb-2">Subject</label>
                 <select 
                   name="subject"
@@ -204,15 +220,14 @@ const Contact = () => {
               </div>
               
               <div>
-                <label className="block text-sm font-medium mb-2">Message</label>
+                <label className="block text-sm font-medium mb-2">Message (Optional)</label>
                 <textarea 
                   rows={4}
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  required
                   className="w-full p-3 rounded-lg bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  placeholder="Tell us about your real estate needs..."
+                  placeholder="Share any additional details about your real estate needs (optional)..."
                 ></textarea>
               </div>
               
