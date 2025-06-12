@@ -31,7 +31,7 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-2 text-slate-600">
               <Mail size={16} />
-              <span className="text-sm">info@elitehomes.com</span>
+              <span className="text-sm"><a href="mailto:kbabu0307babu@gmail.com">kbabu0307babu@gmail.com</a></span>
             </div>
             <a 
               href="https://wa.me/919014487604" 
@@ -94,7 +94,7 @@ const Header = () => {
                 </div>
                 <div className="flex items-center space-x-2 text-slate-600">
                   <Mail size={16} />
-                  <span className="text-sm">info@elitehomes.com</span>
+                  <span className="text-sm"><a href="mailto:kbabu0307babu@gmail.com">kbabu0307babu@gmail.com</a></span>
                 </div>
                 <a 
                   href="https://wa.me/919014487604" 
