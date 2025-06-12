@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Heart } from 'lucide-react';
 
@@ -8,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">EliteHomes</h3>
+            <h3 className="text-2xl font-bold mb-4">Town Square Keys</h3>
             <p className="text-slate-300 mb-6 leading-relaxed">
               Your trusted partner in real estate for over 15 years. We're committed to helping 
               you find the perfect property and achieve your real estate dreams.
@@ -51,8 +50,8 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-slate-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-400 text-sm">
-            © 2024 EliteHomes. All rights reserved.
+          <p className="text-center text-slate-400 text-sm">
+            © 2024 Town Square Keys. All rights reserved.
           </p>
           <p className="text-slate-400 text-sm flex items-center gap-1 mt-2 md:mt-0">
             Made By Kottacheruvu Babu, for finding your perfect home.

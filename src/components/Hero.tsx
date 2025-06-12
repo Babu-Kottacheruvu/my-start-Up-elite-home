@@ -75,7 +75,7 @@ const Hero = () => {
 
           <div className="relative animate-fade-in lg:flex lg:justify-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-md">
-              <h3 className="text-2xl font-bold mb-6 text-white">Why Choose EliteHomes?</h3>
+              <h3 className="text-2xl font-bold mb-6 text-white">Why Choose Town Square Keys?</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>

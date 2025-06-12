@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CheckCircle, Users, Star, Trophy } from 'lucide-react';
 
@@ -9,7 +8,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Why Choose EliteHomes?
+              Why Choose Town Square Keys?
             </h2>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
               For over 15 years, we've been helping families and investors find their perfect properties. 
@@ -67,7 +66,7 @@ const About = () => {
               </p>
               <div className="bg-white/10 rounded-lg p-4">
                 <p className="text-sm text-blue-100 italic">
-                  "EliteHomes made our home buying journey smooth and stress-free. Their expertise and 
+                  "Town Square Keys made our home buying journey smooth and stress-free. Their expertise and 
                   dedication exceeded our expectations."
                 </p>
                 <p className="text-blue-200 font-semibold mt-2">- Sarah & Michael Johnson</p>
