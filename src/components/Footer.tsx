@@ -55,7 +55,7 @@ const Footer = () => {
             © 2024 EliteHomes. All rights reserved.
           </p>
           <p className="text-slate-400 text-sm flex items-center gap-1 mt-2 md:mt-0">
-            Made with <Heart size={16} className="text-red-500" /> for finding your perfect home
+            Made By Kottacheruvu Babu, for finding your perfect home.
           </p>
         </div>
       </div>
