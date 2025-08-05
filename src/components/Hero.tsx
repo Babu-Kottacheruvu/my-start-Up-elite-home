@@ -39,7 +39,7 @@ const Hero = () => {
                 Schedule Consultation
               </button>
               <a 
-                href="https://wa.me/919014487604" 
+                href="https://wa.me/919440226056" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-center"
