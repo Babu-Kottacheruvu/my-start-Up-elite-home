@@ -28,11 +28,11 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-slate-600">
               <Phone size={16} />
-              <span className="text-sm"><a href="tel:+919014487604" className="hover:text-blue-600 transition-colors">+91 9014487604</a></span>
+              <span className="text-sm"><a href="tel:+919440226056" className="hover:text-blue-600 transition-colors">+91 9440226056</a></span>
             </div>
             <div className="flex items-center space-x-2 text-slate-600">
               <Mail size={16} />
-              <a href="mailto:townsquarekeys@gmail.com" className="text-sm hover:text-blue-600 transition-colors">kbabu0307babu@gmail.com</a>
+              <a href="mailto:townsquarekeys@gmail.com" className="text-sm hover:text-blue-600 transition-colors">townsquarekeys@gmail.com</a>
             </div>
             <a 
               href="https://wa.me/919440226056" 
@@ -91,11 +91,11 @@ const Header = () => {
               <div className="px-3 py-2 space-y-2">
                 <div className="flex items-center space-x-2 text-slate-600">
                   <Phone size={16} />
-                  <span className="text-sm"><a href="tel:+919014487604" className="hover:text-blue-600 transition-colors">+91 9014487604</a></span>
+                  <span className="text-sm"><a href="tel:+919440226056" className="hover:text-blue-600 transition-colors">+91 9440226056</a></span>
                 </div>
                 <div className="flex items-center space-x-2 text-slate-600">
                   <Mail size={16} />
-                  <a href="mailto:townsquarekeys@gmail.com" className="text-sm hover:text-blue-600 transition-colors">kbabu0307babu@gmail.com</a>
+                  <a href="mailto:townsquarekeys@gmail.com" className="text-sm hover:text-blue-600 transition-colors">townsquarekeys@gmail.com</a>
                 </div>
                 <a 
                   href="https://wa.me/919440226056" 
