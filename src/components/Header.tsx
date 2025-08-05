@@ -32,10 +32,10 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-2 text-slate-600">
               <Mail size={16} />
-              <a href="mailto:kbabu0307babu@gmail.com" className="text-sm hover:text-blue-600 transition-colors">kbabu0307babu@gmail.com</a>
+              <a href="mailto:townsquarekeys@gmail.com" className="text-sm hover:text-blue-600 transition-colors">kbabu0307babu@gmail.com</a>
             </div>
             <a 
-              href="https://wa.me/919014487604" 
+              href="https://wa.me/919440226056" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors"
@@ -95,10 +95,10 @@ const Header = () => {
                 </div>
                 <div className="flex items-center space-x-2 text-slate-600">
                   <Mail size={16} />
-                  <a href="mailto:kbabu0307babu@gmail.com" className="text-sm hover:text-blue-600 transition-colors">kbabu0307babu@gmail.com</a>
+                  <a href="mailto:townsquarekeys@gmail.com" className="text-sm hover:text-blue-600 transition-colors">kbabu0307babu@gmail.com</a>
                 </div>
                 <a 
-                  href="https://wa.me/919014487604" 
+                  href="https://wa.me/919440226056" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors mt-2"
