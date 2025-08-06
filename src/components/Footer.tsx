@@ -19,7 +19,7 @@ const Footer = () => {
               <a href="#" className="text-slate-400 hover:text-white transition-colors">
                 <Twitter size={24} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/townsquarekeys_official/" className="text-slate-400 hover:text-white transition-colors">
                 <Instagram size={24} />
               </a>
               <a href="#" className="text-slate-400 hover:text-white transition-colors">
