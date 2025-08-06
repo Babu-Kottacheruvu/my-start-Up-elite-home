@@ -32,12 +32,12 @@ const Hero = () => {
                 Start Your Search
                 <ArrowRight size={20} />
               </button>
-              <button 
+              {/* <button 
                 onClick={scrollToContact}
                 className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 Schedule Consultation
-              </button>
+              </button> */}
               <a 
                 href="https://wa.me/919440226056" 
                 target="_blank" 
