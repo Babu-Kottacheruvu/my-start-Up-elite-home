@@ -197,7 +197,7 @@ const Contact = () => {
                   required
                   pattern="[0-9+\s\-()]*"
                   className="w-full p-3 rounded-lg bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  placeholder="+91 90144-87604"
+                  placeholder="+91 9012345678"
                 />
               </div>
               
