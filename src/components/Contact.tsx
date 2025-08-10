@@ -5,8 +5,8 @@ import { useToast } from "@/hooks/use-toast";
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
+    villageTown: '',
     email: '',
     phoneNumber: '',
     subject: '',
@@ -30,7 +30,8 @@ const Contact = () => {
       // Create mailto link with form data
       const subject = encodeURIComponent(`Real Estate Inquiry: ${formData.subject}`);
       const body = encodeURIComponent(
-        `Name: ${formData.firstName} ${formData.lastName}\n` +
+        `Name: ${formData.name}\n` +
+        `Village/Town: ${formData.villageTown}\n` +
         `Email: ${formData.email}\n` +
         `Phone: ${formData.phoneNumber}\n` +
         `Subject: ${formData.subject}\n\n` +
@@ -49,8 +50,8 @@ const Contact = () => {
 
       // Reset form
       setFormData({
-        firstName: '',
-        lastName: '',
+        name: '',
+        villageTown: '',
         email: '',
         phoneNumber: '',
         subject: '',
@@ -149,27 +150,27 @@ const Contact = () => {
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2">First Name</label>
+                  <label className="block text-sm font-medium mb-2">Name</label>
                   <input 
                     type="text" 
-                    name="firstName"
-                    value={formData.firstName}
+                    name="name"
+                    value={formData.name}
                     onChange={handleInputChange}
                     required
                     className="w-full p-3 rounded-lg bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    placeholder="John"
+                    placeholder="Your Name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Last Name</label>
+                  <label className="block text-sm font-medium mb-2">Village/Town</label>
                   <input 
                     type="text" 
-                    name="lastName"
-                    value={formData.lastName}
+                    name="villageTown"
+                    value={formData.villageTown}
                     onChange={handleInputChange}
                     required
                     className="w-full p-3 rounded-lg bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    placeholder="Doe"
+                    placeholder="Your Village or Town"
                   />
                 </div>
               </div>
